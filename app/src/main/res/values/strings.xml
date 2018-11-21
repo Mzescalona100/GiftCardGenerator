@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Gift Code Generator</string>
+    <string name="action_settings">Rate us on the app store today!</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-9282720184335688/7173429057</string> -->
+    <string name="banner_ad_unit_id">ca-app-pub-9282720184335688/6648045051</string>
+    <string name="banner_ad_unit_id2">ca-app-pub-9282720184335688/2603628656</string>
+</resources>

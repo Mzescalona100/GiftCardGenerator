@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="comdatfrogaming.youtube.giftcardgenerator.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9282720184335688/8314374419"></com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Press Generate"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:layout_marginTop="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Code"
+        android:id="@+id/button"
+        android:onClick="generate"
+        android:nestedScrollingEnabled="false"
+        android:layout_above="@+id/lenGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/lenGroup"
+        android:clickable="true"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XXXXX-XXXXX-XXXXX | Used for Steam"
+            android:id="@+id/radioButton1"
+            android:clickable="true"
+            android:layout_above="@+id/lenGroup"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX | Used for Xbox Live"
+            android:id="@+id/radioButton2"
+            android:clickable="true" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XXXX-XXXXXX-XXXXX | Used for Amazon, Ebay"
+            android:id="@+id/radioButton3"
+            android:clickable="true" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XXXX-XXXX-XXXX | Used for PSN, Minecraft"
+            android:id="@+id/radioButton"
+            android:clickable="true" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="XXXX-XXXX-XXXX-XXXX-XXXX | Used for GooglePlay"
+            android:id="@+id/radioButton4"
+            android:clickable="true" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Select a format"
+        android:id="@+id/formatSelect"
+        android:layout_above="@+id/lenGroup"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="If a code is invalid, press generate and try again!"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
